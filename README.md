@@ -4,6 +4,10 @@
 Static libraries for Sherpa-ONNX (Piper) and ONNX Runtime. Fully compiled for MSVC/C++ (x64 /MD), eliminating external DLLs for native applications and game mods.
 
 
+!! Currently still experiencing issues, onnx lib will be uploaded in the future!!
+
+MT compiled!
+
 # 🚀 Sherpa-ONNX Static Libraries (MSVC x64 /MD)
 
 This repository provides **statically compiled** libraries for Sherpa-ONNX (Piper TTS) and ONNX Runtime. These libraries are built for MSVC 2022 (x64 /MD), designed to eliminate external DLL dependencies for high-performance C++ applications and game mods.
