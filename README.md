@@ -37,12 +37,12 @@ You must link the entire suite of static libraries. Add the following list to yo
 
 To replicate this static build, the following core flags were used:
 ```cmd
-# 1. ONNX Runtime Static Build (The Engine)
+# 1. ONNX Runtime Static Build
 # Result: Static .lib files for ORT, linked against /MD runtime.
 build.bat --config Release --build_dir build_static --skip_tests --parallel ^
 --cmake_extra_defines CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL onnxruntime_BUILD_SHARED_LIBS=OFF
 
-# 2. Sherpa-ONNX Static Build (The Wrapper)
+# 2. Sherpa-ONNX Static Build 
 # Result: Final sherpa-onnx*.lib files, linked against the custom ORT build.
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ^
 -DSHERPA_ONNX_ENABLE_C_API=ON -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL ^
