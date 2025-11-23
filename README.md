@@ -36,14 +36,14 @@ You must link the entire suite of static libraries. Add the following list to yo
 ### 3. Used Compiler Flags (For Build Replication)
 
 To replicate this static build, the following core flags were used:
-
-1. **ONNX Runtime Static Build (The Engine):**
 ```cmd
+# 1. ONNX Runtime Static Build (The Engine)
+# Result: Static .lib files for ORT, linked against /MD runtime.
 build.bat --config Release --build_dir build_static --skip_tests --parallel ^
-    --cmake_extra_defines CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL onnxruntime_BUILD_SHARED_LIB=OFF
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ^
-    -DSHERPA_ONNX_ENABLE_C_API=ON -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL ^
-    -DONNXRUNTIME_LIB_DIR="[ORT_LIB_PATH]" -DONNXRUNTIME_INC_DIR="[ORT_INC_PATH]" ..
+--cmake_extra_defines CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL onnxruntime_BUILD_SHARED_LIBS=OFF
 
-no AVX512 supported by this Version
----
+# 2. Sherpa-ONNX Static Build (The Wrapper)
+# Result: Final sherpa-onnx*.lib files, linked against the custom ORT build.
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ^
+-DSHERPA_ONNX_ENABLE_C_API=ON -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL ^
+-DONNXRUNTIME_LIB_DIR="[ORT_LIB_PATH]" -DONNXRUNTIME_INC_DIR="[ORT_INC_PATH]" .. ```
