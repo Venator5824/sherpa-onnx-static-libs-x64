@@ -46,4 +46,4 @@ build.bat --config Release --build_dir build_static --skip_tests --parallel ^
 # Result: Final sherpa-onnx*.lib files, linked against the custom ORT build.
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ^
 -DSHERPA_ONNX_ENABLE_C_API=ON -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL ^
--DONNXRUNTIME_LIB_DIR="[ORT_LIB_PATH]" -DONNXRUNTIME_INC_DIR="[ORT_INC_PATH]" .. ```
+-DONNXRUNTIME_LIB_DIR="[ORT_LIB_PATH]" -DONNXRUNTIME_INC_DIR="[ORT_INC_PATH]" .. 
