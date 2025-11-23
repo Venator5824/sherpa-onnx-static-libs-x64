@@ -33,7 +33,7 @@ You must link the entire suite of static libraries. Add the following list to yo
 
 
 ---
-### 3. Used Compiler Flags (For Build Replication)
+### 3. Used Compiler Flags
 
 To replicate this static build, the following core flags were used:
 ```cmd
