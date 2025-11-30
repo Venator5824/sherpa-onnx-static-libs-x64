@@ -1,13 +1,19 @@
+A)
+espeak-ng.lib is under GPLv3
+ucd.lib is udner GPLv3
+General Public License v3:
+https://www.gnu.org/licenses/gpl-3.0.de.html . 
+Make sure to know the terms and License of GPLv3 when working with, linking, or including, those files. 
 
 
-A) Basic Conditions: 
+B) Basic Conditions: 
 
   1. Credit: 
 
       If possible, make sure the credit the Author, what is Venator5824, of this specific repository, or generally speaking       VenatorMods.
 
 
-B) MAIN LICENSE: 
+C) MAIN LICENSE: 
                               Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
